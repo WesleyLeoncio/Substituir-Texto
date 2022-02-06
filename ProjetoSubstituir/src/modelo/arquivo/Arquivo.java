@@ -1,9 +1,10 @@
-package modelo.arquvio;
+package modelo.arquivo;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileNameExtensionFilter;
@@ -38,9 +39,7 @@ public class Arquivo {
                 linha = br.readLine();
                 if (linha != null) {
                     String[] palavras = linha.split("\n");
-                    for (int i = 0; i < palavras.length; i++) {
-                        listPalavra.add(palavras[i]);
-                    }
+                    listPalavra.addAll(Arrays.asList(palavras));
                 }
 
             } while (linha != null);
@@ -50,14 +49,14 @@ public class Arquivo {
         }
         String backup = texto;
         String palavra = backup;
-        String lista = "";
+        StringBuilder lista = new StringBuilder();
 
-        for (int i = 0; i < listPalavra.size(); i++) {
-            palavra = palavra.replaceAll(this.palavra, listPalavra.get(i)); // Troca palavra pela palavra desejada
-            lista += palavra + "\n";
+        for (String s : listPalavra) {
+            palavra = palavra.replaceAll(this.palavra, s); // Troca palavra pela palavra desejada
+            lista.append(palavra).append("\n");
             palavra = backup;
         }
-        return lista;
+        return lista.toString();
     }
 
     public String abrirArquivo() {

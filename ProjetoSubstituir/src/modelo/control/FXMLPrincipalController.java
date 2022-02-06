@@ -6,7 +6,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import modelo.arquvio.Arquivo;
+import modelo.arquivo.Arquivo;
 
 /**
  * FXML Controller class
@@ -26,7 +26,7 @@ public class FXMLPrincipalController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-
+        // TODO document why this method is empty
     }
     
     @FXML
