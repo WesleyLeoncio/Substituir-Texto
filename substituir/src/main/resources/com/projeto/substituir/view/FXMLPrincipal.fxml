@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<AnchorPane id="AnchorPane" prefHeight="786.0" prefWidth="719.0" style="-fx-background-color: linear-gradient(to right, #11998e, #38ef7d);"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.projeto.substituir.controller.FXMLPrincipalController">
+   <TextField fx:id="txt_arquivo" editable="false" layoutX="33.0" layoutY="147.0" prefHeight="34.0" prefWidth="464.0"
+              promptText="Nome do arquivo" style="-fx-background-radius: 15;">
+      <font>
+         <Font name="Consolas Bold" size="18.0"/>
+      </font>
+   </TextField>
+   <TextField fx:id="txt_palavra" layoutX="33.0" layoutY="202.0" prefHeight="39.0" prefWidth="137.0"
+              promptText="Sua Palavra" style="-fx-background-radius: 15;">
+      <font>
+         <Font name="Consolas" size="18.0"/>
+      </font>
+   </TextField>
+   <TextField fx:id="txt_texto" layoutX="182.0" layoutY="202.0" prefHeight="39.0" prefWidth="314.0"
+              promptText="Palavra que deseja substituir" style="-fx-background-radius: 15;">
+      <font>
+         <Font name="Consolas" size="18.0"/>
+      </font>
+   </TextField>
+   <Button layoutX="507.0" layoutY="207.0" mnemonicParsing="false" onAction="#btSubstituir" prefHeight="34.0"
+           prefWidth="185.0" style="-fx-background-radius: 15; -fx-background-color: #159957;" text="Substituir "
+           textFill="WHITE">
+      <font>
+         <Font name="Leelawadee UI Bold" size="18.0"/>
+      </font>
+   </Button>
+   <TextArea fx:id="txt_comandos" editable="false" layoutX="26.0" layoutY="281.0" prefHeight="481.0" prefWidth="668.0"
+             style="-fx-background-radius: 5; -fx-border-radius: 15;">
+      <font>
+         <Font name="Consolas" size="18.0"/>
+      </font>
+   </TextArea>
+   <Button layoutX="508.0" layoutY="147.0" mnemonicParsing="false" onAction="#abrirArquivo" prefHeight="34.0"
+           prefWidth="185.0" style="-fx-background-radius: 15; -fx-background-color: #159957;" text="Carregar Arquivo"
+           textFill="WHITE">
+      <font>
+         <Font name="Leelawadee UI Bold" size="18.0"/>
+      </font>
+   </Button>
+   <Label alignment="TOP_CENTER" layoutX="65.0" layoutY="30.0" text="Substituidor de Texto" textFill="WHITE">
+      <font>
+         <Font name="Cambria Bold Italic" size="60.0"/>
+      </font>
+   </Label>
+</AnchorPane>
